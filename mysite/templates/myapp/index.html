@@ -1,0 +1,19 @@
+{% extends 'myapp/base.html' %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+
+<div class="alert alert-dark" role="alert">
+    <h4 class="alert-heading">Students</h4>
+</div>    
+
+<div class="content">
+    {% for student in student_list %}
+    <ul>
+        <li><a href="{% url 'myapp:info' student_id=student.id %}">{{student.roll}}  -  {{student.name}}</a></li>
+    </ul>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

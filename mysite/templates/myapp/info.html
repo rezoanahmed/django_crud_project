@@ -1,0 +1,20 @@
+{% extends 'myapp/base.html' %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+
+<div class="alert alert-primary" role="alert">
+    <h4 class="alert-heading">Information</h4>
+</div>
+<div class="content">
+    <p>Name    :  {{info.name}}</p>
+    <p>Roll    :  {{info.roll}}</p>
+    <p>E-mail  :  {{info.email}}</p>
+    <p>Address :  {{info.address}}</p>
+</div>
+<a href="{% url 'myapp:update' student_id=info.id %}" class="btn btn-success">Update</a>
+<a href="{% url 'myapp:delete' student_id=info.id %}" class="btn btn-danger">Delete</a>
+
+
+
+{% endblock %}
