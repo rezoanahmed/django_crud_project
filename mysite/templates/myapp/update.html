@@ -3,14 +3,14 @@
 
 {% block content %}
 
-<div class="alert alert-primary" role="alert">
+<div class="alert alert-success" role="alert">
     <h4 class="alert-heading">Update</h4>
 </div>
 <div class="content">
     <form action="" method="POST">
         {% csrf_token %}
         {{update}}
-        <input type="submit" value="Update" class="btn btn-success">
+        <input type="submit" value="Update" class="btn btn-sm btn-outline-success">
     </form>
 </div>
 
